@@ -1,6 +1,6 @@
 const gamesUrl = "https://api.rawg.io/api/games";
 
-async function fetchImage() {
+async function fetchGames() {
   try {
     const response = await fetch(gamesUrl);
     const gamesObject = await response.json();
@@ -9,7 +9,7 @@ async function fetchImage() {
     console.log(error);
   }
 }
-fetchImage();
+fetchGames();
 
 function createGames(gamesObject) {
   console.dir(gamesObject);
